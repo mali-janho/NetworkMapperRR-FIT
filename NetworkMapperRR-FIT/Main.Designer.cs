@@ -36,6 +36,7 @@
             this.pbMain = new System.Windows.Forms.ProgressBar();
             this.lblProgress = new System.Windows.Forms.Label();
             this.btnStartPDS = new System.Windows.Forms.Button();
+            this.btnFITSettings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbProvider
@@ -47,6 +48,7 @@
             this.cbProvider.Size = new System.Drawing.Size(221, 21);
             this.cbProvider.TabIndex = 0;
             this.cbProvider.SelectedIndexChanged += new System.EventHandler(this.cbProvider_SelectedIndexChanged);
+            this.cbProvider.SelectionChangeCommitted += new System.EventHandler(this.cbProvider_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -107,11 +109,23 @@
             this.btnStartPDS.Visible = false;
             this.btnStartPDS.Click += new System.EventHandler(this.btnStartPDS_Click);
             // 
+            // btnFITSettings
+            // 
+            this.btnFITSettings.Location = new System.Drawing.Point(248, 55);
+            this.btnFITSettings.Name = "btnFITSettings";
+            this.btnFITSettings.Size = new System.Drawing.Size(122, 21);
+            this.btnFITSettings.TabIndex = 8;
+            this.btnFITSettings.Text = "Einstellungen";
+            this.btnFITSettings.UseVisualStyleBackColor = true;
+            this.btnFITSettings.Visible = false;
+            this.btnFITSettings.Click += new System.EventHandler(this.btnFITSettings_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 159);
+            this.Controls.Add(this.btnFITSettings);
             this.Controls.Add(this.btnStartPDS);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.pbMain);
@@ -140,6 +154,7 @@
         private System.Windows.Forms.ProgressBar pbMain;
         private System.Windows.Forms.Label lblProgress;
         private System.Windows.Forms.Button btnStartPDS;
+        private System.Windows.Forms.Button btnFITSettings;
     }
 }
 
