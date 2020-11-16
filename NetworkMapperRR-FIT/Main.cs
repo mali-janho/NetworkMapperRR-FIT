@@ -91,7 +91,7 @@ namespace NetworkMapperRR_FIT
                 //Roadrunner
                 if (BaseSettings.Default.DataProvider == 0)
                 {
-                    StopDownloadService("JHDownloader");
+                    //StopDownloadService("JHDownloader");
                     var confirmResult = MessageBox.Show("Wollen Sie den Inhalt des Roadrunner Ordners löschen?", "Achtung!!", MessageBoxButtons.YesNo);
                     if (confirmResult == DialogResult.Yes)
                     {
@@ -119,7 +119,7 @@ namespace NetworkMapperRR_FIT
 #endif
                     }
 
-                    StartDownloadService("JHDownloader");
+                    //StartDownloadService("JHDownloader");
                     Process.Start("net.exe", "use x: \\\\W2K16DMS\\Transferroad");
                     pbMain.Value = 100;                    
                     MessageBox.Show("Franz IT wurde erfolgreich eingebunden.");
