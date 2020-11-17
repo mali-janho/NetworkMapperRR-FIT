@@ -30,7 +30,8 @@ namespace NetworkMapperRR_FIT
         {
             FillComboBox();
             cbProvider.SelectedIndex = BaseSettings.Default.DataProvider;
-            CheckShowSettingsFranzIT();
+            btnFITSettings.Visible = true;
+
 
 #if DEBUG
             btnStartPDS.Visible = true;
@@ -176,19 +177,7 @@ namespace NetworkMapperRR_FIT
 
         private void cbProvider_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            CheckShowSettingsFranzIT();
-        }
-
-        private void CheckShowSettingsFranzIT()
-        {
-            if (cbProvider.SelectedIndex == 1)
-            {
-                btnFITSettings.Visible = true;
-            }
-            else
-            {
-                btnFITSettings.Visible = false;
-            }
+            
         }
 
         public void DeleteFolderContent(string path)
@@ -205,7 +194,7 @@ namespace NetworkMapperRR_FIT
                 MessageBox.Show(e.ToString(), "Fehler");
             }
 
-        }
+        } 
 
         private void btnFITSettings_Click(object sender, EventArgs e)
         {
